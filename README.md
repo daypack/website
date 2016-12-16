@@ -1,2 +1,4 @@
-# website
-The website of, well, me.
+# README #
+
+This is website is to demonstrate my skills in design and development.
+
