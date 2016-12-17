@@ -7,8 +7,8 @@
 
 // VERTICAL RYTHM
 @base-font-size: 16px;
-@line-height: 1.8;
-@leading: @base-font-size * @line-height;
+@line-height: 24px;
+
 
 // FONTS
 @import url('https://fonts.googleapis.com/css?family=Poppins:600|Slabo+27px');
@@ -20,11 +20,56 @@ body {
 	font-family: @copy, serif;
 }
 
-.generate-headings(6);
+// GENERATE HEADINGS
+// @headline-font-size: @base-font-size * 5; 
 
-.generate-headings(@n, @i: 1) when (@i =< @n) {
-	h@{i} {
+.generate-headings(5);
+
+.generate-headings(@i) when (@i > 0) {
+
+    .generate-headings((@i - 1));
+
+    h@{i} {
 		font-family: @headline, serif;
-	}
-	.generate-headings(@n, (@i + 1));
+    }
+}
+
+h1 {
+	font-size: 48px;
+	line-height: 48px;
+	margin: 48px 0; 
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 32px;
+	margin: 32px 0;
+}
+
+h3 {
+	font-size: 28px;
+	line-height: 28px;
+	margin: 28px 0;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 24px;
+	margin: 24px 0;
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 24px;
+	margin: 24px 0;
+}
+
+p {	
+	font-size: 16px;
+	line-height: 24px;
+	margin: 24px 0;
+}
+
+ul {
+	padding-left: 0;
 }
