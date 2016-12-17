@@ -5,12 +5,12 @@ module.exports = function(grunt) {
 
     // LESS
     less: {
-      dev: {
+      development: {
         options: {
           paths: ['assets']
         },
         files: {
-          'assets/src/styles/styles.css': 'assets/src/styles/styles.less'
+          'assets/dist/styles/styles.css': 'assets/src/styles/styles.less'
         }
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'assets/src/styles',
+          cwd: 'assets/dist/styles',
           src: ['*.css', '!*.min.css'],
           dest: 'assets/dist/styles',
           ext: '.min.css'
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     // WATCH
     watch: {
       styles: {
-        files: ['assets/src/styles/styles.less'],
+        files: ['assets/src/styles/styles.less', 'assets/src/styles/particles/*.less'],
         tasks: ['less:dev', 'cssmin']
       },      
     },
