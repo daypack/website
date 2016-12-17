@@ -9,3 +9,22 @@
 @base-font-size: 16px;
 @line-height: 1.8;
 @leading: @base-font-size * @line-height;
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Poppins:600|Slabo+27px');
+
+@headline: 'Poppins';
+@copy: 'Slabo 27px';
+
+body {
+	font-family: @copy, serif;
+}
+
+.generate-headings(6);
+
+.generate-headings(@n, @i: 1) when (@i =< @n) {
+	h@{i} {
+		font-family: @headline, serif;
+	}
+	.generate-headings(@n, (@i + 1));
+}
