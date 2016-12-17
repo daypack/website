@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/daypack/website/issues"
   },
-  "homepage": "https://github.com/daypack/website#readme"
+  "homepage": "https://github.com/daypack/website#readme",
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
 }
