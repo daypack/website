@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         files: ['assets/src/styles/styles.less', 'assets/src/styles/particles/*.less'],
-        tasks: ['less:dev', 'cssmin']
+        tasks: ['less:development', 'cssmin']
       },      
     },
 
