@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "This is website is to demonstrate my skills in design and development.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daypack/website.git"
+  },
+  "author": "Gregory Evans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daypack/website/issues"
+  },
+  "homepage": "https://github.com/daypack/website#readme"
+}
