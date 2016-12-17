@@ -1,4 +1,6 @@
 website.s
 website.sublime-workspace
 node_modules/
+bower_components/
 assets/dist/
+
