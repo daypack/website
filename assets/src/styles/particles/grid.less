@@ -16,9 +16,17 @@
   }
 }
 
+.clearfix {
+	.clearfix();
+}
+
 .col-3 {
-	width: 800px/3;
+	width: 250px;
 	height: 24px * 8;
 	float: left;
 	.clearfix();
+
+	&:nth-child(even) {
+		margin: 0 24px;
+	}
 }

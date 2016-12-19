@@ -10,16 +10,24 @@
 }
 
 body {
-	background-image:url("@{base-url}/assets/src/img/dev/baseline.png");;
+	// background-image:url("@{base-url}/assets/src/img/dev/baseline.png");
 }
 
 .header {
-	width: 100%;
 	padding: 12px 0;
-	background: @grey-40;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.75);
+
+	a {
+		color: @white;
+	}
 
 	nav {
 		float: right;
+
 
 		ul {
 			margin: 0;
@@ -31,16 +39,16 @@ body {
 			display: inline;
 
 			&:last-child a {
-				border-right: 1px solid @grey-50;
+				// border-right: 1px solid @grey-50;
 			}
 		}
 
 		a {
 			padding: 14px;
-			border-left: 1px solid @grey-50;
 
 			&:hover {
-				background: @grey-20;
+				background: @white;
+				color: @black;
 			}
 		}
 	}
@@ -60,13 +68,37 @@ body {
 .content {
 	width: 800px;
 	margin: 0 auto;
+	margin-bottom: 144px;
+}
+
+.frame {
+	width: 388px;
+	height: 192px;
+	background: @grey-20;
+	float: left;
+	margin-bottom: 24px;
+
+	&:nth-child(2n+1) {
+		margin-right: 24px;
+	}
+}
+
+.description {
+	width: 388px;
+	height: 192px;
+	margin: 0 0 24px 24px;
+	float: left;
+
+	p {
+		margin: 0;
+	}
 }
 
 .footer {
 	border-top: 1px solid @grey-50;
-	// background: @white;
-	margin-top: 96px - 1px;
-	padding: 24px 0;
+	margin-top: 96px;
+	padding: 24px 0 96px;
+	clear: both;
 	.clearfix();
 
 	ul {
