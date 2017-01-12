@@ -95,9 +95,7 @@ body {
 .banner {
 	width: 100%;
 	height: 24px * 16;
-	// background: svg-gradient(to bottom, lighten(@colour-main, 50%), @colour-main);
-	// border-bottom: 25px solid @colour-secondary;
-	background: @colour-main;
+	background: linear-gradient(to right bottom, lighten(@colour-main, 5%) 50%, @colour-main 50%);
 
 	&.full {
 		height: 100vh;
@@ -125,9 +123,6 @@ body {
 		    	position: relative;
 		    }
 
-		    .ticker {
-		    }
-
 		    p {
 		    	font-size: 32px;
 		    	line-height: 48px;
@@ -150,13 +145,6 @@ body {
 .content {
 	width: 800px;
 	margin: 120px auto 144px;
-	// margin-bottom: 144px;
-
-	&-divider {
-		height: 24px;
-		width: 100%;
-		background: red;
-	}
 }
 
 .profile-pic {
@@ -165,7 +153,7 @@ body {
 	margin-right: 40px;
 }
 
-.frame {
+.project {
 	width: 388px;
 	float: left;
 	margin-bottom: 24px;
@@ -173,6 +161,41 @@ body {
 
 	&:nth-child(2n+1) {
 		margin-right: 24px;
+	}
+
+	.project-graphic {
+		width: 388px;
+		height: 192px;
+		position: relative;
+	}
+
+	.project-view {
+		background: rgba(0, 0, 0, 0.75);
+		height: 192px;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		transition: opacity 1s;
+		width: 388px;
+
+		&:hover {
+			opacity: 1;
+
+		}
+	}
+
+	.project-view-btn {
+		border: 2px solid @white;
+	    color: @white;
+	    display: table;
+	    margin: 75px auto;
+	    padding: 5px 15px;
+	    cursor: pointer;
+
+	    &:hover {
+	    	border-color: @colour-secondary;
+	    }
 	}
 
 	img {
@@ -196,6 +219,37 @@ body {
 	}
 }
 
+.project-detail {
+	height: 100%;
+	width: 100%;
+	// background: rgba(0, 0, 0, 0.75);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	&-wrapper {
+		background: @white;
+		margin: 115px auto;
+		width: 800px;
+		// border: 1px solid rgba(0, 0, 0, 0.5);
+		// padding: 24px 40px;
+		// background-image:url("@{base-url}/assets/src/img/dev/baseline.png");		
+	}
+
+	h2 {
+		margin: 24px 0 48px;
+	}
+
+	.project-graphic-featured {
+		width: 800px;
+	}
+
+	.project-graphic-square {
+		width: 400px;
+	}
+}
+
 .footer {
 	border-top: 4px solid @colour-main;
 	margin-top: 96px;
@@ -210,10 +264,10 @@ body {
 	.btn-contact {
 		border: 2px solid @colour-main;
 		cursor: pointer;
-		margin: 0 auto;
-		padding: 10px 20px;
+		font-family: @headline, serif;
 		font-weight: 600;
-		// text-transform: uppercase;
+		margin: 0 auto;
+		padding: 10px 40px;
 
 		&:hover {
 			// color: @colour-secondary;
