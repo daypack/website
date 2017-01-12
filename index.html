@@ -27,15 +27,30 @@
 			
 			<div class="container">
 				
-				<a href="index.html">Gregory Evans</a>
+				<a id="title">
+					<!-- <img src="" alt="Kudo" /> -->
+					Gregory Evans
+				</a>
+				
+				<a href="" id="menu">menu</a>
 
-				<nav>
-					<ul>
-						<li><a href="#">about me</a></li>
-						<li><a href="#">work</a></li>
-						<li><a href="#">contact</a></li>
-					</ul>
-				</nav>
+				<!-- Menu -->
+				<div id="menu-container">
+
+					<nav class="menu-nav">
+					
+						<ul>
+							<li><a class="menu-about">about</a></li>
+							<li><a class="menu-work">work</a></li>
+							<li><a class="menu-contact">contact</a></li>
+						</ul>
+
+					</nav>
+
+				</div>
+				<!-- /Menu -->
+
+				
 
 			</div>
 
@@ -44,12 +59,9 @@
 		<div class="banner full">
 			
 			<div class="banner-container">
-				<!-- <div class="banner-text">
-					<h1>Hello, my name is Greg Evans. </h1> 
-					<p>I am a web designer and developer and I build rich websites and online applications.</p>
-				</div> -->
 				<div class="banner-text">
-					<h1><span class="ticker">awesome</span>&nbsp;web solutions.</h1>
+					<h1><span class="ticker">awesome</span><h1>
+					<h1>web solutions</h1>
 					<p>Project Management. Web Development. Visual Design.</p>
 				</div>
 			</div>
@@ -60,17 +72,21 @@
 
 		<div class="wrapper">
 
-		<section class="content">
+		<section class="content about">
 
 			<h2>about me</h2>
+
+			<img class="profile-pic" src="assets/dist/img/profile.png" alt="Profile picture of Gregory Evans" />
 			
 			<p>With nine years of industry experience in a variety of companies with specialisations from e-Learning to e-Commerce platforms and online software development, I have developed an array of skills from Graphic and Web Design through to Front-End Development and User Interface Design.</p>
 
 			<p>I believe that every solution should be uniquely tailored and tuned to the needs and requirements of the project and client through an in-depth understanding of the goals and outcomes that will return a succesful result.</p>
 
+			<div class="clearfix"></div>
+
 		</section>
 
-		<section class="content">
+		<section class="content work">
 			
 			<h2>work</h2>
 
@@ -78,30 +94,26 @@
 			<!-- <p>Just a few selected pieces of work.</p> -->
 
 			<div class="frame">
-				<img src="" alt="" />
+				<img src="assets/dist/img/screenshots/bib.png" alt="" />
+				<h3>RECOM Electronics</h3>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+			</div>
+
+			<div class="frame">
+				<img src="assets/dist/img/screenshots/eagleview.png" alt="" />
+				<h3>Bet IT Best</h3>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+			</div>
+
+			<div class="frame">
+				<img src="assets/dist/img/screenshots/recom.png" alt="" />
 				<h3>ZooRoyal</h3>
 				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
 			</div>
 
 			<div class="frame">
-				<div class="spinner"></div>
-			</div>
-
-			<div class="frame">
 				<img src="" alt="" />
-				<h3>ZooRoyal</h3>
-				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
-			</div>
-
-			<div class="frame">
-				<img src="" alt="" />
-				<h3>ZooRoyal</h3>
-				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
-			</div>
-
-			<div class="frame">
-				<img src="" alt="" />
-				<h3>ZooRoyal</h3>
+				<h3>Eagleview</h3>
 				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto. voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
 			</div>
 
@@ -113,15 +125,14 @@
 
 			<div class="clearfix"></div>
 
-			
-
 		</section>
 
-		<section class="content">
+		<section class="content contact">
 			
-			<h1>contact</h1>
+			<h2>contact</h2>
 
-			<p>Interested in me working with you on a project? Get in touch with me at <a href="">hello@gregevans.internet</a></p>
+			<p>Interested in me working with you on a project?</p>
+			<p>Get in touch with me at <a href="">hello@gregevans.internet</a></p>
 
 		</section>
 
@@ -131,19 +142,18 @@
 			
 			<div class="container">
 
-				<p>Gregory Evans is a just guy who works on the web.</p>
-
-				<p>Copyright &copy; 2016</p>					
+				<a class="btn-contact">contact me</a>					
 				
 			</div>
 
 		</div>
 
 		<!-- back to top -->
-		<div class="to-top"></div>
+		<!-- <div class="to-top"></div> -->
 
 		<!-- Resources: scripts -->
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/dist/scripts/jquery.particleground.min.js"></script>
 		<script type="text/javascript" src="assets/dist/scripts/scripts.js"></script>
 		
 	</body>

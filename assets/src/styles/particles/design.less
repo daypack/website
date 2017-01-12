@@ -5,8 +5,17 @@
 	Date: 17/12/2016
 */
 
+body {
+	// position: relative;
+	overflow-y: scroll;
+}
+
 * {
 	line-height: @line-height;
+}
+
+.hide {
+	display: none;
 }
 
 .wrapper {
@@ -23,37 +32,57 @@
 	font-size: 24px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
-	a {
-		color: @colour-main;
+	#title {
+		position: relative;
+		z-index: 100;
+		cursor: pointer;
 	}
 
-	nav {
+	a {
+		color: @colour-main;
+
+		&:hover {
+			color: @colour-secondary;
+		}
+	}
+
+	#menu {
+		position: relative;
+		z-index: 100;
 		float: right;
+	}
 
+	#menu-container {
+		position: fixed;
+		background: rgba(255, 255, 255, 1);
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
 
-		ul {
-			margin: 0;
-			padding: 0;
-		}
+		.menu-nav {
+			margin: 0 auto;
+			text-align: center;
+			width: 100%;
+			margin-top: 15%;
 
-		li {
-			float: left;
-			display: inline;
+			li {
+				display: inline;
 
-			&:last-child a {
-				// border-right: 1px solid @grey-50;
-			}
-		}
+				a {
+					padding: 10px 20px;
+					color: @colour-main;
+					cursor: pointer;
 
-		a {
-			padding: 10px 20px 9px;
+					&:hover {
+						color: @colour-secondary;
+					}
+				}
 
-			&:hover {
-				// background: @colour-main;
-				color: @colour-secondary;
-				border-bottom: 4px solid;
-				padding-bottom: 5px;
-			}
+		 		&:last-child a {
+		 			// border-right: 1px solid @grey-50;
+		 		}
+		 	}
 		}
 	}
 }
@@ -66,7 +95,9 @@
 .banner {
 	width: 100%;
 	height: 24px * 16;
-	background: svg-gradient(to bottom, darken(@colour-main, 35%), @colour-main);
+	// background: svg-gradient(to bottom, lighten(@colour-main, 50%), @colour-main);
+	// border-bottom: 25px solid @colour-secondary;
+	background: @colour-main;
 
 	&.full {
 		height: 100vh;
@@ -84,6 +115,7 @@
 		    color: @white;
 		    margin: 0 auto;
 		    line-height: 34px;
+		    text-shadow: 0 0 5px rgba(0, 0, 50px, 0.75);
 
 		    h1 {
 		    	margin-top: 0;
@@ -117,8 +149,20 @@
 
 .content {
 	width: 800px;
-	margin: 0 auto;
-	margin-bottom: 144px;
+	margin: 120px auto 144px;
+	// margin-bottom: 144px;
+
+	&-divider {
+		height: 24px;
+		width: 100%;
+		background: red;
+	}
+}
+
+.profile-pic {
+	width: 300px;
+	float: left;
+	margin-right: 40px;
 }
 
 .frame {
@@ -137,6 +181,7 @@
 	    width: 100%;
 	    height: 192px;
 	    background: @grey-10;
+		background-image: url("@{base-url}/assets/src/img/dev/baseline.png") no-repeat center;
 	}
 
 	h3 {
@@ -160,6 +205,20 @@
 
 	.container {
 		text-align: center;
+	}
+
+	.btn-contact {
+		border: 2px solid @colour-main;
+		cursor: pointer;
+		margin: 0 auto;
+		padding: 10px 20px;
+		font-weight: 600;
+		// text-transform: uppercase;
+
+		&:hover {
+			// color: @colour-secondary;
+			border-color: @colour-secondary;
+		}
 	}
 
 	ul {
