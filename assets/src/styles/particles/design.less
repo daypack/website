@@ -95,7 +95,9 @@ body {
 .banner {
 	width: 100%;
 	height: 24px * 16;
-	background: linear-gradient(to right bottom, lighten(@colour-main, 5%) 50%, @colour-main 50%);
+	
+	/* background: linear-gradient(to right bottom, lighten(@colour-main, 5%) 50%, @colour-main 50%); */
+	background-image: url("@{base-url}/assets/dist/img/code.png");
 
 	&.full {
 		height: 100vh;
@@ -145,6 +147,14 @@ body {
 .content {
 	width: 800px;
 	margin: 120px auto 144px;
+
+	&.contact {
+		text-align: center;
+
+		p {
+			font-size: 24px;
+		}
+	}
 }
 
 .profile-pic {
@@ -222,7 +232,7 @@ body {
 .project-detail {
 	height: 100%;
 	width: 100%;
-	// background: rgba(0, 0, 0, 0.75);
+	background: @white;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -232,9 +242,24 @@ body {
 		background: @white;
 		margin: 115px auto;
 		width: 800px;
-		// border: 1px solid rgba(0, 0, 0, 0.5);
-		// padding: 24px 40px;
-		// background-image:url("@{base-url}/assets/src/img/dev/baseline.png");		
+		padding-bottom: 115px;
+		position: relative;
+
+		.close {
+			position: absolute;
+			background: @white;
+			font-size: 14px;
+			padding: 5px 15px;
+			color: @colour-main;
+			border: 2px solid @colour-main;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+
+			&:hover {
+		    	border-color: @colour-secondary;
+		    }
+		}
 	}
 
 	h2 {
@@ -245,8 +270,27 @@ body {
 		width: 800px;
 	}
 
-	.project-graphic-square {
+	.project-graphic-med {
 		width: 400px;
+	}
+
+	.project-graphic {
+
+		&-large {
+			float: left;
+			width: 800px;
+		}
+
+		&-med {
+			float: left;
+			width: 400px;
+		}
+
+		&-small {
+			float: left;
+			width: 200px;
+		}
+		
 	}
 }
 
@@ -264,13 +308,13 @@ body {
 	.btn-contact {
 		border: 2px solid @colour-main;
 		cursor: pointer;
-		font-family: @headline, serif;
-		font-weight: 600;
+		// font-family: @headline, serif;
+		// font-weight: 600;
 		margin: 0 auto;
 		padding: 10px 40px;
 
 		&:hover {
-			// color: @colour-secondary;
+			color: @colour-main;
 			border-color: @colour-secondary;
 		}
 	}
