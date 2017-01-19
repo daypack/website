@@ -1,0 +1,22 @@
+{
+  "name": "gregoryevans",
+  "description": "This is website is to demonstrate my skills in design and development.",
+  "main": "index.html",
+  "authors": [
+    "Gregory Evans"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/daypack/website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize-css": "^5.0.0"
+  }
+}
