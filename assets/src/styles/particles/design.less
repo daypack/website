@@ -50,6 +50,7 @@ body {
 		position: relative;
 		z-index: 100;
 		float: right;
+		cursor: pointer;
 	}
 
 	#menu-container {
@@ -149,7 +150,7 @@ body {
 	margin: 120px auto 144px;
 
 	&.contact {
-		text-align: center;
+		// text-align: center;
 
 		p {
 			font-size: 24px;
@@ -227,7 +228,7 @@ body {
 		// background-image: url("@{base-url}/assets/src/img/dev/baseline.png") no-repeat center;
 	}
 
-	h3 {
+	h2  {
 		margin: 0;
 		float: left;
 		width: 100%;
@@ -274,7 +275,8 @@ body {
 		}
 	}
 
-	h2 {
+	h1 {
+		font-size: 48px;
 		text-align: left;
 		margin: 24px 0 48px;
 	}
@@ -350,53 +352,4 @@ body {
 	p {
 		margin-top: 0;
 	}
-}
-
-.to-top {
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	background: url("@{base-url}/assets/dist/img/icons/chev-up.png") no-repeat;
-	background-color: @colour-main;
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	border: 2px solid @colour-main;
-	cursor: pointer;
-
-	&:hover {
-		background-color: @colour-secondary;
-		border-color: @colour-secondary; 
-	}
-}
-
-// Extentions
-.spinner {
-	width: 40px;
-	height: 40px;
-	margin: 100px auto;
-	background-color: @colour-secondary;
-
-	border-radius: 100%;  
-	-webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-	animation: sk-scaleout 1.0s infinite ease-in-out;
-}
-
-@-webkit-keyframes sk-scaleout {
-  0% { -webkit-transform: scale(0) }
-  100% {
-    -webkit-transform: scale(1.0);
-    opacity: 0;
-  }
-}
-
-@keyframes sk-scaleout {
-  0% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 100% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-    opacity: 0;
-  }
 }
