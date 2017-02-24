@@ -1,3 +1,5 @@
+
+
 NProgress.start();
 
 $(document).ready(function() {
@@ -29,5 +31,8 @@ $(document).ready(function() {
 
 	});
 
+	$(".banner").fadeIn(2000);
+
     NProgress.done(true);
+
 });
