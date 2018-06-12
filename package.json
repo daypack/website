@@ -20,5 +20,8 @@
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "particlesjs": "^2.2.2"
   }
 }

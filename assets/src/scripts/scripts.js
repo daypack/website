@@ -1,5 +1,3 @@
-
-
 NProgress.start();
 
 $(document).ready(function() {
@@ -21,18 +19,34 @@ $(document).ready(function() {
 	});
 
     // List of adjectives
-    var words = ["good", "creative", "professional", "awesome"];
+    var words = [
+    	"design user friendly web applications", 
+    	"provide design solutions to unique business needs", 
+    	"create satisfying online experiences", 
+    	"make business systems scalable and efficient"
+    ];
 
 	$.each(words,function(i, word) {
 
 		setTimeout(function(){
-			$(".ticker").html(word).hide().fadeIn(100);
-		}, 2000 * i);
+			$(".ticker").html(word).hide().fadeIn(400);
+		}, 5000 * i);
 
 	});
 
 	$(".banner").fadeIn(2000);
 
     NProgress.done(true);
+    
+    $(".btn-top").click(function() {
+        console.log("click");
+	  $("html, body").animate({scrollTop: 0}, "slow");
+	});
 
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+	particlesJS.load('particles-js', 'assets/src/scripts/particlesjs-config.json', function() {
+	  console.log('callback - particles.js config loaded monkey');
+	});
+
+    
 });
